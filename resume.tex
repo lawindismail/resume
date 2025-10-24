@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+
+% For ATS-friendly PDF generation (searchable and copyable text)
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% ---------- PACKAGES ----------
+\usepackage[margin=20mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % A more modern alternative to the default Computer Modern font.
+\usepackage[hidelinks]{hyperref} % For clickable links without distracting borders.
+\usepackage{enumitem} % Advanced control over lists.
+\usepackage{titlesec} % For customizing section titles.
+\usepackage{array} % For more flexible table and array environments.
+\usepackage{xcolor} % For using colors.
+\usepackage{tabularx} % For tables with columns that automatically adjust their width.
+\usepackage{ragged2e} % For better text justification.
+
+% ---------- GLOBAL STYLES ----------
+\setlength{\parindent}{0pt} % No indentation for paragraphs.
+\setlength{\parskip}{0pt} % No extra space between paragraphs.
+
+% Custom list style for tighter spacing in experience and project descriptions.
+\setlist[itemize]{
+    leftmargin=*,
+    label=\textbullet,
+    topsep=2pt,
+    partopsep=0pt,
+    itemsep=2pt,
+    parsep=0pt
+}
+
+% Section title formatting for a clean, professional look.
+\titleformat{\section}
+  {\large\bfseries\scshape\RaggedRight} % Format: Large, bold, small caps, left-aligned.
+  {}
+  {0em}
+  {}[\color{black}\titlerule] % A full-width line under the section title.
+\titlespacing*{\section}{0pt}{10pt}{8pt} % Spacing: left, before, after.
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\RaggedRight} % Format: Normal size, bold, left-aligned.
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt} % Spacing: left, before, after.
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\itshape\RaggedRight} % Format: Normal size, bold, italic, left-aligned.
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsubsection}{0pt}{6pt}{3pt} % Spacing: left, before, after.
+
+% ---------- DOCUMENT ----------
+\begin{document}
+
+% ===== HEADER =====
+\begin{center}
+    {\Huge \bfseries Lawind Ismail}
+    \vspace{5pt}
+\end{center}
+
+\begin{center}
+    \textit{Melbourne, VIC} \\
+    \href{mailto:lawind.ismail@gmail.com}{lawind.ismail@gmail.com} \,|\,
+    \href{https://www.linkedin.com/in/lawind}{linkedin.com/in/lawind} \,|\,
+    \href{https://github.com/lawindismail}{github.com/lawindismail} \,|\,
+    \textit{0477 119 068}
+\end{center}
+
+% ===== PROFESSIONAL SUMMARY =====
+\section{Professional Summary}
+\justifying
+Hands-on mechatronics engineer with strong creativity, critical thinking, and a passion for problem-solving. I have worked on diverse set of projects such as programming micro-controllers to create custom communication protocols, integrating BMS into PCB's and developing fully functional mechanical assemblies in CAD. I am confident using a diverse set of engineering tools, including open-source alternatives. I thrive in collaborative settings, and a quick learner. Seeking roles in Melbourne, Australia; graduating at the end of 2025. Bilingual in English and Kurdish (Sorani).
+
+% ===== SKILLS =====
+\section{Skills}
+{ % Group to keep the arraystretch change local to this table
+\renewcommand{\arraystretch}{1.8} % Increase vertical spacing between rows
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
+    Software Development: & C, C++, Python, MATLAB, Simulink, AVR Assembly, Multithreaded Processing (PThreads), Git (GitHub), Linux, Visual Studio Code \\
+    Embedded Systems \& IoT: & ESP-IDF, PlatformIO, Arduino, Microchip Studio / Atmel Studio, Micro-controllers (ESP32, Arduino Uno, ATMEGA32A), Custom Protocol Development, LoRa, Mesh Network Communication, Mobile Networks (4G/5G SIM), IIoT (Industrial IoT) \\
+    Electronics \& PCB Design: & Circuit Design, PCB Design, Altium Designer, KiCAD, Antenna Design, Electrical Circuit Theory \\
+    Mechanical \& Manufacturing: & SOLIDWORKS, Onshape, FreeCAD, Autodesk Inventor, Fusion 360, Technical Drawings (AS 1101), Sheet Metal Design, 3D Printing, Slicer Softwares (OrcaSlicer, Cura), Z-SUITE, CNC Machining (G-code/NC-code), DFMA/DFM/DFA, LEAN (Toyota Production System), Engineering Dynamics \& Statics, Materials Engineering, Materials Science \\
+    Analysis, Simulation \& Controls: & Finite Element Analysis (FEA), Topology Optimisation (SOLIDWORKS \& nTop), ANSYS Granta Selector, Rockwell Arena, Control Systems, PLC (Programmable Logic Controllers), NI MyRIO, NI LabVIEW \\
+    Project Management \& Tools: & Jira, Agile Methodology, Microsoft Project, Gantt Project, Microsoft Teams, Google Workplace, Microsoft Office 365 \\
+    Professional Skills: & Microsoft Excel, Data Analytics, Engineering Mathematics, Linear Programming (Linear Optimization), Bill of Materials (BOM)  \\
+    Soft Skills: & Communication, Teamwork, Active listening, Adaptability, Creativity, Reliable, Leadership, Time Management \\
+\end{tabularx}
+} % End the group
+
+% ===== EDUCATION =====
+\section{Education \& Qualifications}
+\textbf{RMIT University} \hfill {2023--2025} \\
+Bachelor of Engineering (Advanced Manufacturing \& Mechatronics) (Honours) \\
+\textit{Currently enrolled; Weighted Average Mark (WAM): 80}
+\newpage % This is because work experience is in the final line of page one
+% ===== WORK EXPERIENCE =====
+\section{Work Experience}
+\textbf{Electronic, Hardware, Embedded, \& Mechanical Engineer} \textbar{} \textit{DataFarm (Startup)} \hfill
+\vspace{-8pt} % Reduces the space above the date
+\begin{flushright}
+    {Nov 2023--Present}
+\end{flushright}
+\vspace{-8pt} % Reduces the space below the date
+\textit{DataFarm streamlines agricultural data collection for farmers via compact soil sensors and a network that uploads real-time data to the cloud.}
+\begin{itemize}
+    \item Planned sprints and assigned tasks in Jira; maintained traceability across firmware, electronics, and mechanical workstreams.
+    \item Developed ESP32 firmware in PlatformIO, implementing multithreaded processing and microcontroller sleep states to minimise power consumption.
+    \item Built consumer-grade hardware in Onshape and SOLIDWORKS using DFMA principles; authored Engineering Drawings conforming to AS1101.
+    \item Performed materials selection with ANSYS Granta Selector; produced comparative Ashby charts to justify down-selects.
+    \item Designed schematics and PCBs in Altium Designer; created BOMs for economic feasibility analysis and supplier PCBA quotes.
+    \item Managed version control using Git and GitHub; enforced branch strategy and code reviews across the team.
+\end{itemize}
+
+% ===== NOTABLE UNIVERSITY PROJECTS =====
+\section{Notable University Projects}
+\subsection{Capstone with Industry Partner: Sutton Tools Pty Ltd (In Progress)}
+Automated feeder system with defect detection; responsibilities include system architecture, controls integration, and prototype validation.
+
+\subsection{Robotic Gripper Project}
+\begin{itemize}
+    \item Designed and fabricated a fractal-inspired robotic gripper achieving 50 N gripping force while handling delicate objects (100\% success rate with eggs).
+    \item Implemented closed-loop PID control in LabVIEW with $\pm 0.5$ mm positional accuracy; calibrated load cells to $\pm 0.1$ N and IR sensors to $\pm 2$ mm.
+    \item Modelled 15 precision CAD components in Onshape; optimised geometry for strength and gentle manipulation.
+    \item Conducted iterative FEA in ANSYS Workbench; added reinforcements in critical stress zones to prevent failure during gripping.
+    \item Led a cross-functional team of 5 through an 8-week rapid prototyping cycle; delivered the prototype 2 weeks ahead of schedule.
+\end{itemize}
+
+\subsection{Advanced Manufacturing \& Design (Topology Optimisation)}
+\begin{itemize}
+    \item Redesigned a hydraulic manifold for additive manufacturing in Onshape, achieving 88.7\% volume reduction (364,868 mm\textsuperscript{3} $\rightarrow$ 41,245 mm\textsuperscript{3}) and 46 g final mass while preserving interfaces.
+    \item Optimised internal channel network with curved, self-supporting pathways (overhangs $< 80^\circ$) to minimise pressure drops and eliminate supports; maintained 1.5 mm minimum wall thickness in high-stress zones.
+    \item Applied DFAM: build orientation analysis and structural reinforcements enabled support-free FDM printing; benchmarked parameters (e.g., cooling and speed).
+    \item Performed hand calculations for hole positioning, connectivity mapping, and volumetric analysis; produced detailed channel diameter/coordinate tables.
+    \item Fabricated prototypes on an ELEGOO Neptune 3 Pro (eSun PLA, 215$^\circ$C, 60 mm/s); achieved 0.15 mm dimensional accuracy with \textasciitilde 4 h print time.
+    \item Led CAD modelling and 3D printing in a 6-person team; owned final report, documentation, and design evaluation.
+\end{itemize}
+
+\subsection{Buck Converter PCB Design Project}
+\begin{itemize}
+    \item Engineered and simulated a 12 V $\rightarrow$ 5 V, 2 A step-down buck converter in Altium Designer; selected R/C values from first principles.
+    \item Verified load-step and frequency response in simulation; achieved voltage ripple $< 50$ mV\textsubscript{pp} and efficiency $> 90$\% at full load.
+    \item Produced a two-layer PCB with DFM rules: dedicated 1.5 mm$^2$ copper pour for power planes vs. 0.3 mm$^2$ signal traces; passed all DRCs.
+    \item Assembled SMT components on a 100 $\times$ 100 mm PCB; minimised parasitic inductance in switching loops; validated regulation within $\pm 3$\%.
+    \item Conformed to IPC standards: IPC-2221, IPC-2222, IPC-7351, IPC-4101; authored a technical report comparing simulation vs. experimental data and recommending an optimised output filter.
+\end{itemize}
+
+\subsection{Mechanical Evaluation of Titanium Metamaterials}
+Executed cyclic compressive loading on Ti-6Al-4V lattice specimens (per Noronha et al., 2025); captured load--displacement at 50 Hz with synchronised high-speed video.
+\begin{itemize}
+    \item Characterised stress--strain over six cycles (5--40\% strain): toe-region settling, linear elasticity ($\le$ 10\%), ductile plasticity (15--25\%), delayed fracture initiation ($\sim 30$\%).
+    \item Quantified damage accumulation via modulus degradation (16.93 GPa $\rightarrow$ 6.21 GPa) and yield strength progression (0.47 MPa $\rightarrow$ 0.86 MPa).
+    \item Benchmarked against cubic and TPMS gyroid lattices: $\ge 52$\% increase in maximum strain capacity (35\% vs. $\le 23$\%) and shift from brittle collapse to ductile failure.
+    \item Analysed energy absorption/compliance with spreadsheets and curve fitting; reported enhanced damage tolerance for aerospace, automotive, and biomedical use cases.
+    \item Authored a standalone technical report covering methodology, results, and design implications.
+\end{itemize}
+
+% ===== REFERENCES =====
+\section{References}
+\begin{flushleft}
+    \begin{tabular}{@{}lll@{}}
+        Anas Koujan & Thermo Trade & 0426 823 552 \\
+        Nicholas Alston & Gippsland Water & 0422 208 487 \\
+        Dean Hooper & Siemens Energy & 0450 032 002 \\
+        Mohnish Deshpande & Cisco Splunk & 0480 136 857 \\
+    \end{tabular}
+\end{flushleft}
+
+\end{document}

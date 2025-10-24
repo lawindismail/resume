@@ -1,0 +1,59 @@
+name: Automated Resume Build and Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the source code
+        uses: actions/checkout@v4
+
+      - name: Build the LaTeX file into a PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          latexmk_use_xelatex: true
+
+      - name: Upload PDF for the next job
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: resume.pdf
+
+  publish_pdf_release:
+    needs: build_resume
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the generated PDF
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-pdf
+
+      - name: Generate a timestamp for tagging
+        id: timestamp
+        run: echo "tag_name=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_OUTPUT
+
+      - name: Create a new GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.timestamp.outputs.tag_name }}
+          release_name: "Resume - ${{ steps.timestamp.outputs.tag_name }}"
+          body: "Automated resume build"
+          draft: false
+          prerelease: false
+
+      - name: Upload Resume PDF to Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./resume.pdf
+          asset_name: resume.pdf
+          asset_content_type: application/pdf
