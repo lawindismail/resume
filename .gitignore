@@ -1,0 +1,53 @@
+# .gitignore for LaTeX resume project
+
+# LaTeX intermediate and auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ind
+*.ilg
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+
+# Backup and temporary files from editors
+*~
+*.bak
+*.swp
+*.swx
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor folders
+.vscode/
+.idea/
+
+# latexmk and other config or lock files
+latexmkrc
+
+# Optional: ignore generated PDFs (uncomment if you don't track PDFs in repo)
+# *.pdf
+
+# Ignore the generated resume PDF specifically
+resume.pdf
+
+# Project-specific generated files
+# resume.aux and other files are covered by patterns above; keep source `.tex` tracked
