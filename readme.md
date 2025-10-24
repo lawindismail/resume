@@ -49,3 +49,9 @@ While the primary purpose is automated builds, the resume can also be compiled l
     ```bash
     pdflatex resume.tex
     ```
+
+## Acknowledgements
+
+This automated workflow relies on the excellent `xu-cheng/latex-action` to compile the LaTeX document. A big thanks to Xu-Cheng for creating and maintaining this useful tool.
+
+-   **GitHub Repository**: [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action)
