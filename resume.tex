@@ -59,12 +59,11 @@
 \begin{center}
     {\Huge \bfseries Lawind Ismail}
     \vspace{5pt}
-\end{center}
 
-\begin{center}
     \textit{Melbourne, VIC} \\
+    \vspace{3pt}
     \href{mailto:lawind.ismail@gmail.com}{lawind.ismail@gmail.com} \,|\,
-    \href{https://www.linkedin.com/in/lawind}{linkedin.com/in/lawind} \,|\,
+    \href{https://www.linkedin.com/in/lawind}{linkedin.com/in/lawind} \\
     \href{https://github.com/lawindismail}{github.com/lawindismail} \,|\,
     \textit{0477 119 068}
 \end{center}
@@ -77,7 +76,7 @@ Hands-on mechatronics engineer with strong creativity, critical thinking, and a 
 % ===== SKILLS =====
 \section{Skills}
 { % Group to keep the arraystretch change local to this table
-\renewcommand{\arraystretch}{1.5} % Increase vertical spacing between rows
+\renewcommand{\arraystretch}{1.4} % Increase vertical spacing between rows
 \begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
     Systems Programming \& Software: & C, C++, Python, MATLAB, Simulink, AVR Assembly, Multithreaded Processing (PThreads), Git (GitHub), Linux, Visual Studio Code \\
     Embedded Systems \& IoT: & ESP-IDF, PlatformIO, Arduino, Microchip Studio / Atmel Studio, Micro-controllers (ESP32, Arduino Uno, ATMEGA32A), Custom Protocol Development, LoRa, Mesh Network Communication, Mobile Networks (4G/5G SIM), IIoT (Industrial IoT) \\
@@ -94,7 +93,7 @@ Hands-on mechatronics engineer with strong creativity, critical thinking, and a 
 \section{Education \& Qualifications}
 \textbf{RMIT University} \hfill {2023--2025} \\
 Bachelor of Engineering (Advanced Manufacturing \& Mechatronics) (Honours) \\
-\textit{Currently enrolled; Weighted Average Mark (WAM): 80}
+\textit{Graduated with First Class Honours; Weighted Average Mark (WAM): 81; Final Year GPA: 3.8}
 \newpage % This is because work experience is in the final line of page one
 % ===== WORK EXPERIENCE =====
 \section{Work Experience}
@@ -116,8 +115,16 @@ Bachelor of Engineering (Advanced Manufacturing \& Mechatronics) (Honours) \\
 
 % ===== NOTABLE UNIVERSITY PROJECTS =====
 \section{Notable University Projects}
-\subsection{Capstone with Industry Partner: Sutton Tools Pty Ltd (In Progress)}
-Architected an industrial automation system for defect detection; integrated PLC controls and sensors to fully automate the feeding process, removing manual handling requirements.
+\subsection{Industrial Automation System --- Capstone with Sutton Tools Pty Ltd}
+\begin{itemize}
+    \item Developed an end-to-end automated defect detection and feeder system for HSS drill bits to replace manual inspection, matching the 30-second CNC manufacturing cycle.
+    \item Implemented an unsupervised \textbf{Machine Learning pipeline using the PaDiM framework} with a \textbf{ConvNeXt-Tiny backbone}; achieved a \textbf{0.9994 AUROC} and \textbf{0.9894 F1-score} in identifying surface anomalies and geometric defects.
+    \item Engineered ESP32 firmware using \textbf{FreeRTOS} to manage a mutex-protected queue, tracking four physical parts simultaneously through loading, cleaning, inspection, and sorting stations.
+    \item Designed a \textbf{4-station rotary indexing fixture} in Onshape, utilizing a NEMA 17 stepper motor with a 4:1 gear ratio and a spring-loaded mechanism for stabilized 360$^\circ$ drill rotation during imaging.
+    \item Developed a robust communication handshake (GPIO/Serial) between the ESP32 controller and a Raspberry Pi inference engine to synchronize multi-view image capture with mechanical motion.
+    \item Integrated physical classification hardware, including a servo-actuated diverter and a magnetic drop-gate, to automate the binning of parts based on real-time ML inference results.
+    \item Applied digital signal processing (rolling median filters) to Hall-effect sensor data to ensure reliable part detection in high-vibration industrial environments.
+\end{itemize}
 
 \subsection{Robotic Gripper Project}
 \begin{itemize}
@@ -162,8 +169,8 @@ Executed cyclic compressive loading on Ti-6Al-4V lattice specimens (per Noronha 
 \begin{flushleft}
     \begin{tabular}{@{}lll@{}}
         Arijana Kekoc & Student at RMIT University & 0457 195 599 \\
-        Dr. Amirali Khodadadian Gostar  & Senior Lecturer at RMIT University  & (phone number to be added) \\
-        Dhanuka Amarasinghe & Student at RMIT University & (phone number to be added) \\
+        Dr. Amirali Khodadadian Gostar  & Senior Lecturer at RMIT University  & 0432 568 428 \\
+        Dhanuka Amarasinghe & Student at RMIT University & 0416 312 460 \\
         Mohnish Deshpande & Software Engineer at DataFarm Technologies & 0480 136 857 \\
     \end{tabular}
 \end{flushleft}
